@@ -25,6 +25,7 @@ jobs:
     - name: Install package
       run: |
         sudo apt-get -y install uuid-dev
+        sudo apt-get -y install libbz2-dev
         sudo apt-get -y install libxml2-dev
         sudo apt-get -y install liblzma-dev
         sudo apt-get -y install libswscale-dev
