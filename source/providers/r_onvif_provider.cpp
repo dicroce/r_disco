@@ -47,6 +47,12 @@ void r_onvif_provider::interrogate_camera(
         if(_agent && _agent->_is_recording(sc.id))
             return;
 
+        printf("Interrogating camera %s\n", sc.id.c_str());
+        printf("IPv4: %s\n", sc.ipv4.value().c_str());
+        printf("XAddrs: %s\n", sc.xaddrs.value().c_str());
+        printf("Username: %s\n", username.value().c_str());
+        printf("Password: %s\n", password.value().c_str());
+
         r_onvif::r_onvif_cam cam(sc.ipv4.value(), 80, "http", sc.xaddrs.value(), username, password);
 
         auto caps = cam.get_camera_capabilities();
