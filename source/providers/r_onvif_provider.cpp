@@ -152,7 +152,6 @@ r_utils::r_nullable<r_stream_config> r_onvif_provider::interrogate_camera(
         cache_entry.created = steady_clock::now();
         cache_entry.config = config;
         _cache[id] = cache_entry;
-        }
     }
     else
     {
