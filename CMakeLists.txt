@@ -64,3 +64,5 @@ target_link_libraries(
     r_onvif
     r_utils
 )
+
+add_subdirectory(ut)
