@@ -29,14 +29,6 @@ target_include_directories(
     ${r_onvif_SOURCE_DIR}/include
     ${r_db_SOURCE_DIR}/include
     ${r_pipeline_SOURCE_DIR}/include
- #   PkgConfig::gstreamer
- #   PkgConfig::gstreamer-sdp
- #   PkgConfig::gstreamer-app
- #   PkgConfig::gstreamer-video
-)
-target_link_directories(
-    r_disco_ut PUBLIC
-#    ${GST_LIBRARY_DIRS}
 )
 target_link_libraries(
     r_disco_ut LINK_PUBLIC
@@ -45,13 +37,4 @@ target_link_libraries(
     r_db
     r_onvif
     r_utils
-#    PkgConfig::gstreamer
-#    PkgConfig::gstreamer-sdp
-#    PkgConfig::gstreamer-app
-#    PkgConfig::gstreamer-video
-#    PkgConfig::gstreamer-rtsp-server
-#    PkgConfig::gstreamer-codecparsers
-#    PkgConfig::gstreamer-plugins-base
-#    PkgConfig::gstreamer-plugins-good
-#    PkgConfig::gstreamer-plugins-bad
 )
