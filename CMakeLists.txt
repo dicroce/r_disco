@@ -69,6 +69,10 @@ target_link_libraries(
     ${GST_LIBS}
 )
 
+option(BUILD_INSTALL_DEV_PACKAGES "Install dev packages for subprojects" OFF)
+
 add_subdirectory(ut)
 
-configure_dev_package("r_disco" "A C++ library that manages a collection of ONVIF cameras.")
+if(PROJECT_IS_TOP_LEVEL OR BUILD_INSTALL_DEV_PACKAGES)
+    configure_dev_package("r_disco" "A C++ library that manages a collection of ONVIF cameras.")
+endif()
